@@ -4,8 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model {
-
+class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model
+{
+	/**
+	 * @inheritdoc
+	 * @see  ACP_Editing_Model::get_edit_value()
+	 */
 	public function get_edit_value( $id ) {
 		return implode( ',', (array) members_get_post_roles( $id ) );
 	}
@@ -13,14 +17,17 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model {
 	/**
 	 * Get editing options when using an ajax callback
 	 *
-	 * @param array $request
-	 *
-	 * @return array
+	 * @inheritdoc
+	 * @see  ACP_Editing_Model::get_ajax_options()
 	 */
 	public function get_ajax_options( $request ) {
 		return array_map( 'translate_user_role', wp_roles()->get_names() );
 	}
 
+	/**
+	 * @inheritdoc
+	 * @see  ACP_Editing_Model::get_view_settings()
+	 */
 	public function get_view_settings() {
 		return array(
 			'type'        => 'select2_dropdown',
@@ -30,6 +37,10 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model {
 		);
 	}
 
+	/**
+	 * @inheritdoc
+	 * @see  ACP_Editing_Model::save()
+	 */
 	public function save( $id, $value ) {
 
 		if ( is_string( $value ) ) {

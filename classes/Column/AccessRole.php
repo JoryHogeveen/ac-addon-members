@@ -4,21 +4,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Column_AccessRole extends ACA_Members_Column {
-
+class ACA_Members_Column_AccessRole extends ACA_Members_Column
+{
+	/**
+	 * @inheritdoc
+	 * @see  ACA_Members_Column::__construct()
+	 */
 	public function __construct() {
 		parent::__construct();
 		$this->set_type( 'members-access-role' );
 		$this->set_label( __( 'Access Roles', 'codepress-admin-columns' ) );
 	}
 
-	// Meta
+	/**
+	 * @return  string
+	 */
 	public function get_meta_key() {
 		return '_members_access_role';
 	}
 
 	/**
-	 * @see   AC_Column::get_value()
+	 * @inheritdoc
+	 * @see  AC_Column::get_value()
 	 */
 	public function get_value( $id ) {
 		$value = (array) $this->get_raw_value( $id );
@@ -48,7 +55,8 @@ class ACA_Members_Column_AccessRole extends ACA_Members_Column {
 	}
 
 	/**
-	 * @see   AC_Column_Meta::get_raw_value()
+	 * @inheritdoc
+	 * @see  AC_Column_Meta::get_raw_value()
 	 */
 	public function get_raw_value( $id ) {
 		$value = members_get_post_roles( $id );//$this->get_meta_value( $id, $this->get_meta_key(), false );

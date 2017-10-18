@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:  Admin Columns - Members add-on
- * Plugin URI:   https://admincolumns.com
+ * Plugin URI:   https://github.com/JoryHogeveen/admincolumns-addon-members
  * Version:      1.0
  * Description:  Show Members fields in your admin post overviews and edit them inline! Members integration Add-on for Admin Columns.
  * Author:       Jory Hogeveen
@@ -22,6 +22,9 @@ class ACA_Members {
 	 */
 	protected static $_instance = null;
 
+	/**
+	 * @return ACA_Members
+	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
 			self::$_instance = new self();
@@ -30,10 +33,16 @@ class ACA_Members {
 		return self::$_instance;
 	}
 
+	/**
+	 * ACA_Members constructor.
+	 */
 	private function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'init' ) );
 	}
 
+	/**
+	 * Check dependencies and register actions.
+	 */
 	public function init() {
 		if ( ! is_admin() ) {
 			return;
@@ -81,6 +90,9 @@ class ACA_Members {
 		return $dependencies->has_missing();
 	}
 
+	/**
+	 * @return string
+	 */
 	public function get_plugin_basename() {
 		static $basename = null;
 		if ( $basename ) {
@@ -90,6 +102,9 @@ class ACA_Members {
 		return $basename;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function get_plugin_dir() {
 		static $dir = null;
 		if ( $dir ) {
@@ -99,6 +114,9 @@ class ACA_Members {
 		return $dir;
 	}
 
+	/**
+	 * @return int|float|string
+	 */
 	public function get_version() {
 		static $version = null;
 		if ( $version ) {
@@ -110,6 +128,8 @@ class ACA_Members {
 	}
 
 	/**
+	 * Whether Admin Columns Pro is active
+	 *
 	 * @return bool
 	 */
 	private function is_pro_active() {
@@ -132,13 +152,10 @@ class ACA_Members {
 	 *
 	 */
 	public function add_columns( $list_screen ) {
-
 		switch ( true ) {
-
 			case $list_screen instanceof AC_ListScreen_Post:
 				$list_screen->register_column_type( new ACA_Members_Column_AccessRole() );
 				$list_screen->register_column_type( new ACA_Members_Column_AccessError() );
-
 				break;
 		}
 	}
@@ -147,22 +164,21 @@ class ACA_Members {
 	 * Add custom columns
 	 *
 	 * @param AC_ListScreen $list_screen
-	 *
 	 */
 	public function add_pro_columns( $list_screen ) {
-
 		switch ( true ) {
-
 			case $list_screen instanceof AC_ListScreen_Post:
 				$list_screen->register_column_type( new ACA_Members_Pro_Column_AccessRole() );
 				$list_screen->register_column_type( new ACA_Members_Pro_Column_AccessError() );
-
-			break;
+				break;
 		}
 	}
 
 }
 
+/**
+ * @return ACA_Members
+ */
 function ac_addon_members() {
 	return ACA_Members::instance();
 }

@@ -4,8 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Column_AccessError extends ACA_Members_Column {
-
+class ACA_Members_Column_AccessError extends ACA_Members_Column
+{
+	/**
+	 * @inheritdoc
+	 * @see  ACA_Members_Column::__construct()
+	 */
 	public function __construct() {
 		parent::__construct();
 		$this->set_type( 'members-access-error' );
@@ -13,16 +17,15 @@ class ACA_Members_Column_AccessError extends ACA_Members_Column {
 	}
 
 	/**
-	 * Meta
-	 *
-	 * Cannot use members functions because of the filters.
+	 * @return  string
 	 */
 	public function get_meta_key() {
 		return '_members_access_error';
 	}
 
 	/**
-	 * @see   AC_Column_Meta::get_raw_value()
+	 * @inheritdoc
+	 * @see  AC_Column_Meta::get_raw_value()
 	 */
 	public function get_raw_value( $id ) {
 		$value = members_get_post_access_message( $id );

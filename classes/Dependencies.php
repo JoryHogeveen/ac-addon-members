@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Show a notice when add-on dependencies are not met
  *
- * @version 1.1
+ * @version 1.0
  */
 class ACA_Members_Dependencies {
 
