@@ -13,6 +13,13 @@ Members integration Add-on for Admin Columns.
 
 Show Members fields in your admin post overviews and (if you have Admin Columns Pro) edit them inline!
 
+= Requirements =
+
+* **Admin Columns:** https://wordpress.org/plugins/codepress-admin-columns/
+* *Or **Admin Columns Pro:** https://www.admincolumns.com/*
+* **Members:** https://wordpress.org/plugins/members/
+* **Members Content Permissions** feature enabled.
+
 == Installation ==
 
 Installation of this plugin works like any other plugin out there. Either:
