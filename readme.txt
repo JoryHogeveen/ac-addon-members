@@ -7,10 +7,11 @@ Tested up to: 4.8
 Requires PHP: 5.2.4
 Stable tag: 1.0
 
-Members integration Add-on for Admin Columns. Show Members fields in your admin post overviews and (if you have Admin Columns Pro) edit them inline!
+Members integration Add-on for Admin Columns.
 
 == Description ==
 
+Show Members fields in your admin post overviews and (if you have Admin Columns Pro) edit them inline!
 
 == Installation ==
 
@@ -19,12 +20,13 @@ Installation of this plugin works like any other plugin out there. Either:
 1. Upload and unpack the zip file to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-Or search for "Genesis Widget Column Classes" via your plugins menu.
+Or search for "Admin Columns - Members add-on" via your plugins menu.
 
 == Screenshots ==
 
-1. 
-2. 
+1. Members columns
+2. Inline edit (Admin Columns Pro)
+3. Members metabox
 
 == Changelog ==
 
