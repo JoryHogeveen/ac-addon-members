@@ -2,6 +2,8 @@
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://github.com/JoryHogeveen/admincolumns-addon-members/blob/master/license.txt)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLMLU7XQ9E8&lc=NL&item_name=Admin%20Columns%20-%20Members%20add-on&item_number=JWPP%2dACA-Members&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
+![Admin Columns - Members add-on](https://raw.githubusercontent.com/JoryHogeveen/admincolumns-addon-members/master/.github/assets/banner-1544x500.jpg)  
+
 Members integration Add-on for Admin Columns.
 
 ## Description
