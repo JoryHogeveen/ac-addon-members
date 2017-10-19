@@ -24,6 +24,15 @@ Installation of this plugin works like any other plugin out there. Either:
 
 Or search for "Admin Columns - Members add-on" via your plugins menu.
 
+## Screenshots
+
+1. Members columns
+![Members columns](https://raw.githubusercontent.com/JoryHogeveen/admincolumns-addon-members/master/.github/assets/screenshot-1.jpg)
+2. Inline edit (Admin Columns Pro)
+![Inline edit (Admin Columns Pro)](https://raw.githubusercontent.com/JoryHogeveen/admincolumns-addon-members/master/.github/assets/screenshot-2.jpg)
+3. Members metabox
+![Members metabox](https://raw.githubusercontent.com/JoryHogeveen/admincolumns-addon-members/master/.github/assets/screenshot-3.jpg)
+
 ## Other Notes
 
 You can find me here:
