@@ -21,7 +21,7 @@ class ACA_Members_Pro_Editing_AccessError extends ACP_Editing_Model
 	public function get_view_settings() {
 		return array(
 			'type'        => 'textarea',
-			'placeholder' => __( 'Enter text to show when the user has no access', 'codepress-admin-columns' ),
+			'placeholder' => __( 'Enter text to show when the user has no access', 'ac-addon-members' ),
 		);
 	}
 

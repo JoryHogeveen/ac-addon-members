@@ -13,7 +13,7 @@ class ACA_Members_Column_AccessError extends ACA_Members_Column
 	public function __construct() {
 		parent::__construct();
 		$this->set_type( 'members-access-error' );
-		$this->set_label( __( 'Access Error text', 'codepress-admin-columns' ) );
+		$this->set_label( __( 'Access Error text', 'ac-addon-members' ) );
 	}
 
 	/**

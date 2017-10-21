@@ -13,7 +13,7 @@ class ACA_Members_Column_AccessRole extends ACA_Members_Column
 	public function __construct() {
 		parent::__construct();
 		$this->set_type( 'members-access-role' );
-		$this->set_label( __( 'Access Roles', 'codepress-admin-columns' ) );
+		$this->set_label( __( 'Access Roles', 'ac-addon-members' ) );
 	}
 
 	/**
