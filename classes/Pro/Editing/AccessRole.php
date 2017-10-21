@@ -21,7 +21,7 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model
 	 * @see  ACP_Editing_Model::get_ajax_options()
 	 */
 	public function get_ajax_options( $request ) {
-		return array_map( 'translate_user_role', wp_roles()->get_names() );
+		return ac_helper()->user->get_roles();
 	}
 
 	/**
@@ -33,7 +33,7 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model
 			'type'        => 'select2_dropdown',
 			'placeholder' => __( 'Select roles for access validation', 'codepress-admin-columns' ),
 			'multiple'    => true,
-			'options'     => $this->get_ajax_options( null ),
+			'options'     => ac_helper()->user->get_roles(),
 		);
 	}
 
