@@ -30,7 +30,7 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP_Editing_Model
 	 */
 	public function get_view_settings() {
 		return array(
-			'type'        => 'select2_dropdown',
+			'type'        => 'checklist',
 			'placeholder' => __( 'Select roles for access validation', 'codepress-admin-columns' ),
 			'multiple'    => true,
 			'options'     => ac_helper()->user->get_roles(),
