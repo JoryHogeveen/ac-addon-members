@@ -48,6 +48,10 @@ class ACA_Members {
 			return;
 		}
 
+		if ( ! current_user_can( 'restrict_content' ) ) {
+			return;
+		}
+
 		if ( $this->has_missing_dependencies() ) {
 			return;
 		}
