@@ -15,9 +15,9 @@ Show Members fields in your admin post overviews and (if you have Admin Columns 
 
 = Requirements =
 
-* **Admin Columns:** https://wordpress.org/plugins/codepress-admin-columns/
-  * *Or **Admin Columns Pro:** https://www.admincolumns.com/*
-* **Members:** https://wordpress.org/plugins/members/
+* **Admin Columns:** [wordpress.org/plugins/codepress-admin-columns](https://wordpress.org/plugins/codepress-admin-columns/)
+  * *Or **Admin Columns Pro:** [www.admincolumns.com](https://www.admincolumns.com/)*
+* **Members:** [wordpress.org/plugins/members](https://wordpress.org/plugins/members/)
 * **Members Content Permissions** feature enabled.
 
 The plugin will notify you at installation if something is missing.
