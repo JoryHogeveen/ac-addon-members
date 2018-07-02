@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class ACA_Members_Pro_Column_AccessError extends ACA_Members_Column_AccessError
-	implements ACP_Column_EditingInterface
+	implements ACP\Editing\Editable
 	//, ACP_Column_SortingInterface, ACP_Column_FilteringInterface
 {
 	// Pro

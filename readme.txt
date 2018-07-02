@@ -39,6 +39,10 @@ Or search for "Admin Columns - Members add-on" via your plugins menu.
 
 == Changelog ==
 
+= NEWVERSION =
+
+*	Made compatible with Admin Columns Pro 4.3
+
 = 1.0 =
 
 *	Created from nothingness just to be one of the cool kids. Yay!

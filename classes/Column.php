@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-abstract class ACA_Members_Column extends AC_Column_Meta
+abstract class ACA_Members_Column extends AC\Column\Meta
 {
 	/**
 	 * @inheritdoc

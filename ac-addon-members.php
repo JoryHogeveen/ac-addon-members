@@ -13,6 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+define( 'ACA_MEMBERS_FILE', __FILE__ );
+
 class ACA_Members {
 
 	const CLASS_PREFIX = 'ACA_Members_';
@@ -56,7 +58,7 @@ class ACA_Members {
 			return;
 		}
 
-		AC()->autoloader()->register_prefix( self::CLASS_PREFIX, $this->get_plugin_dir() . 'classes/' );
+		AC\Autoloader::instance()->register_prefix( 'ACA\Members', plugin_dir_path( ACA_MEMBERS_FILE ) . 'classes/' );
 
 		add_action( 'ac/column_groups', array( $this, 'register_column_groups' ) );
 		// Prio 9 to make sure PRO is loaded after FREE.
@@ -65,7 +67,7 @@ class ACA_Members {
 	}
 
 	/**
-	 * @param AC_Groups $groups
+	 * @param AC\Groups $groups
 	 */
 	public function register_column_groups( $groups ) {
 		$groups->register_group( 'members', __( 'Members', 'members' ), 11 );
@@ -75,15 +77,16 @@ class ACA_Members {
 	 * @return bool True when there are missing dependencies
 	 */
 	private function has_missing_dependencies() {
-		require_once plugin_dir_path( __FILE__ ) . 'classes/Dependencies.php';
+		require_once 'classes/Dependencies.php';
 
-		$dependencies = new ACA_Members_Dependencies( __FILE__ );
-
+		$dependencies = new ACA_Members_Dependencies( plugin_basename( ACA_MEMBERS_FILE ) );
+		$dependencies->check_acp( '4.3' );
 		// Pro not required.
 		//$dependencies->is_acp_active( '4.0.3' );
 
 		if ( ! $this->is_members_active() ) {
-			$dependencies->add_missing( $dependencies->get_search_link( 'Members', 'Members' ) );
+
+			$dependencies->add_missing_plugin( __( 'Members', 'Members' ), $dependencies->get_search_url( 'Members' ) );
 		}
 
 		if ( ! members_content_permissions_enabled() ) {
@@ -103,6 +106,7 @@ class ACA_Members {
 			return $basename;
 		}
 		$basename = plugin_basename( __FILE__ );
+
 		return $basename;
 	}
 
@@ -115,6 +119,7 @@ class ACA_Members {
 			return $dir;
 		}
 		$dir = plugin_dir_path( __FILE__ );
+
 		return $dir;
 	}
 
@@ -128,16 +133,8 @@ class ACA_Members {
 		}
 		$plugins = get_plugins();
 		$version = $plugins[ $this->get_plugin_basename() ]['Version'];
-		return $version;
-	}
 
-	/**
-	 * Whether Admin Columns Pro is active
-	 *
-	 * @return bool
-	 */
-	private function is_pro_active() {
-		return function_exists( 'ac_is_pro_active' ) && ac_is_pro_active();
+		return $version;
 	}
 
 	/**
@@ -152,12 +149,12 @@ class ACA_Members {
 	/**
 	 * Add custom columns
 	 *
-	 * @param AC_ListScreen $list_screen
+	 * @param AC\ListScreen $list_screen
 	 *
 	 */
 	public function add_columns( $list_screen ) {
 		switch ( true ) {
-			case $list_screen instanceof AC_ListScreen_Post:
+			case $list_screen instanceof AC\ListScreen\Post:
 				$list_screen->register_column_type( new ACA_Members_Column_AccessRole() );
 				$list_screen->register_column_type( new ACA_Members_Column_AccessError() );
 				break;
@@ -167,11 +164,11 @@ class ACA_Members {
 	/**
 	 * Add custom columns
 	 *
-	 * @param AC_ListScreen $list_screen
+	 * @param AC\ListScreen $list_screen
 	 */
 	public function add_pro_columns( $list_screen ) {
 		switch ( true ) {
-			case $list_screen instanceof AC_ListScreen_Post:
+			case $list_screen instanceof AC\ListScreen\Post:
 				$list_screen->register_column_type( new ACA_Members_Pro_Column_AccessRole() );
 				$list_screen->register_column_type( new ACA_Members_Pro_Column_AccessError() );
 				break;
