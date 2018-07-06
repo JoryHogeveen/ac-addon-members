@@ -80,9 +80,10 @@ class ACA_Members {
 		require_once 'classes/Dependencies.php';
 
 		$dependencies = new ACA_Members_Dependencies( plugin_basename( ACA_MEMBERS_FILE ) );
+		$dependencies->check_php_version( '5.3' );
 
 		if ( ! class_exists( 'AC\Autoloader' ) ) {
-			if ( function_exists( 'ACP' ) ) {
+			if ( $this->is_pro_active() ) {
 				$dependencies->check_acp( '4.3' );
 			} else {
 				$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );
@@ -143,6 +144,15 @@ class ACA_Members {
 		$version = $plugins[ $this->get_plugin_basename() ]['Version'];
 
 		return $version;
+	}
+
+	/**
+	 * Whether Admin Columns Pro is active
+	 *
+	 * @return bool
+	 */
+	private function is_pro_active() {
+		return function_exists( 'ac_is_pro_active' ) && ac_is_pro_active();
 	}
 
 	/**
