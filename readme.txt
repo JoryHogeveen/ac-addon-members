@@ -1,6 +1,6 @@
 === Admin Columns - Members add-on ===
 Contributors: keraweb
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLMLU7XQ9E8&lc=NL&item_name=Admin%20Columns%20-%20Members%20add-on&item_number=JWPP%2dACA-Members&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: https://www.keraweb.nl/donate.php?for=ac-addon-members
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
 Tested up to: 4.9
