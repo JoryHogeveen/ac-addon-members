@@ -41,7 +41,7 @@ Or search for "Admin Columns - Members add-on" via your plugins menu.
 
 = 1.1 =
 
-*	Made compatible with Admin Columns 3.2 & Admin Columns Pro 4.3
+*	**Compatibility/Fix:** Made compatible with Admin Columns 3.2 & Admin Columns Pro 4.3
 
 = 1.0 =
 
