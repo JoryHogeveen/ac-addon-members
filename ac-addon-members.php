@@ -80,7 +80,15 @@ class ACA_Members {
 		require_once 'classes/Dependencies.php';
 
 		$dependencies = new ACA_Members_Dependencies( plugin_basename( ACA_MEMBERS_FILE ) );
-		$dependencies->check_acp( '4.3' );
+
+		if ( ! class_exists( 'AC\Autoloader' ) ) {
+			if ( function_exists( 'ACP' ) ) {
+				$dependencies->check_acp( '4.3' );
+			} else {
+				$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );
+			}
+		}
+
 		// Pro not required.
 		//$dependencies->is_acp_active( '4.0.3' );
 
