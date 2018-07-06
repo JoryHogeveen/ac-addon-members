@@ -1,6 +1,8 @@
 # Admin Columns - Members add-on
-[![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://github.com/JoryHogeveen/admincolumns-addon-members/blob/master/license.txt)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLMLU7XQ9E8&lc=NL&item_name=Admin%20Columns%20-%20Members%20add-on&item_number=JWPP%2dACA-Members&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+[![WordPress Plugin version](https://img.shields.io/wordpress/plugin/v/ac-addon-members.svg?style=flat)](https://wordpress.org/plugins/ac-addon-members/)
+[![WordPress Plugin WP tested version](https://img.shields.io/wordpress/v/ac-addon-members.svg?style=flat)](https://wordpress.org/plugins/ac-addon-members/)
+[![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://github.com/JoryHogeveen/ac-addon-members/blob/master/license.txt)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.keraweb.nl/donate.php?for=ac-addon-members)
 
 ![Admin Columns - Members add-on](https://raw.githubusercontent.com/JoryHogeveen/admincolumns-addon-members/master/.github/assets/banner-1544x500.jpg)  
 
