@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Editing_AccessError extends ACP_Editing_Model
+class ACA_Members_Pro_Editing_AccessError extends ACP\Editing\Model
 {
 	/**
 	 * @inheritdoc

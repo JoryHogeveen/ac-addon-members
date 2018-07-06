@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLM
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
 Tested up to: 4.9
-Requires PHP: 5.2.4
-Stable tag: 1.0
+Requires PHP: 5.3
+Stable tag: 1.1
 
 Members integration Add-on for Admin Columns.
 
@@ -38,6 +38,10 @@ Or search for "Admin Columns - Members add-on" via your plugins menu.
 3. Members metabox
 
 == Changelog ==
+
+= 1.1 =
+
+*	**Compatibility/Fix:** Made compatible with Admin Columns 3.2 & Admin Columns Pro 4.3
 
 = 1.0 =
 

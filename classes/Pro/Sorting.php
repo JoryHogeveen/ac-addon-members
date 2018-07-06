@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Sorting extends ACP_Sorting_Model_Meta
+class ACA_Members_Pro_Sorting extends ACP\Sorting\Model\Meta
 {
 	/**
 	 * @inheritdoc

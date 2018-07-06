@@ -4,8 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Filtering extends ACP_Filtering_Model_Meta
-{
+class ACA_Members_Pro_Filtering extends ACP\Filtering\Model\Meta {
 	/**
 	 * @inheritdoc
 	 * @see  ACP_Filtering_Model_Meta::__construct()
