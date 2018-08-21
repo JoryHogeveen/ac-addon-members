@@ -94,11 +94,9 @@ class ACA_Members {
 		//$dependencies->is_acp_active( '4.0.3' );
 
 		if ( ! $this->is_members_active() ) {
-
 			$dependencies->add_missing_plugin( __( 'Members', 'Members' ), $dependencies->get_search_url( 'Members' ) );
 		}
-
-		if ( ! members_content_permissions_enabled() ) {
+		elseif ( ! function_exists( 'members_content_permissions_enabled' ) || ! members_content_permissions_enabled() ) {
 			$link = $dependencies->get_html_link( admin_url( 'options-general.php?page=members-settings' ), 'Members Content Permissions' );
 			$dependencies->add_missing( $link );
 		}
