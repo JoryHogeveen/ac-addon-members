@@ -3,7 +3,7 @@ Contributors: keraweb
 Donate link: https://www.keraweb.nl/donate.php?for=ac-addon-members
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
-Tested up to: 4.9
+Tested up to: 6.1
 Requires PHP: 5.3
 Stable tag: 1.2
 
