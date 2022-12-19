@@ -58,7 +58,9 @@ class ACA_Members {
 			return;
 		}
 
-		AC\Autoloader::instance()->register_prefix( 'ACA\Members', plugin_dir_path( ACA_MEMBERS_FILE ) . 'classes/' );
+		require_once 'classes/Autoloader.php';
+
+		ACA_Members_Autoloader::instance()->register_prefix( 'ACA\Members', plugin_dir_path( ACA_MEMBERS_FILE ) . 'classes/' );
 
 		add_action( 'ac/column_groups', array( $this, 'register_column_groups' ) );
 		// Prio 9 to make sure PRO is loaded after FREE.
