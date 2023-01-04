@@ -5,7 +5,7 @@ Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
 Tested up to: 6.1
 Requires PHP: 5.3
-Stable tag: 1.2
+Stable tag: 1.3
 
 Members integration Add-on for Admin Columns.
 
@@ -38,6 +38,10 @@ Or search for "Admin Columns - Members add-on" via your plugins menu.
 3. Members metabox
 
 == Changelog ==
+
+= 1.3 =
+
+*	**Fix:** Switch to namespaces.
 
 = 1.2 =
 

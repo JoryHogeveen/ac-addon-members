@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Admin Columns - Members add-on
  * Plugin URI:   https://github.com/JoryHogeveen/ac-addon-members
- * Version:      1.2
+ * Version:      1.3
  * Description:  Show Members fields in your admin post overviews and edit them inline! Members integration Add-on for Admin Columns.
  * Author:       Jory Hogeveen
  * Author URI:   http://www.keraweb.nl
