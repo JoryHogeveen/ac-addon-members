@@ -1,14 +1,16 @@
 <?php
+namespace ACA\Members\Pro\Filtering;
+use ACA\Members\Pro\Filtering;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Filtering_AccessRole extends ACA_Members_Pro_Filtering
+class AccessRole extends Filtering
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Filtering_Model_Meta::get_filtering_data()
+	 * @see  \ACP\Filtering\Model\Meta::get_filtering_data()
 	 */
 	public function get_filtering_data() {
 		$data = parent::get_filtering_data();

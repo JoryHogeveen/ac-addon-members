@@ -1,25 +1,26 @@
 <?php
+namespace ACA\Members\Pro\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Column_AccessError extends ACA_Members_Column_AccessError
+class AccessError extends \ACA\Members\Column\AccessError
 	implements ACP\Editing\Editable
 	//, ACP_Column_SortingInterface, ACP_Column_FilteringInterface
 {
 	// Pro
 
 	public function editing() {
-		return new ACA_Members_Pro_Editing_AccessError( $this );
+		return new \ACA\Members\Pro\Editing\AccessError( $this );
 	}
 
 	public function sorting() {
-		return new ACA_Members_Pro_Sorting( $this );
+		return new \ACA\Members\Pro\Sorting( $this );
 	}
 
 	public function filtering() {
-		return new ACA_Members_Pro_Filtering( $this );
+		return new \ACA\Members\Pro\Filtering( $this );
 	}
 
 }

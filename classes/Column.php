@@ -1,10 +1,11 @@
 <?php
+namespace ACA\Members;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-abstract class ACA_Members_Column extends AC\Column\Meta
+abstract class Column extends \AC\Column\Meta
 {
 	/**
 	 * @inheritdoc

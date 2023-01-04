@@ -1,14 +1,15 @@
 <?php
+namespace ACA\Members\Pro\Editing;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Pro_Editing_AccessRole extends ACP\Editing\Model
+class AccessRole extends \ACP\Editing\Model
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model::get_edit_value()
+	 * @see  \ACP\Editing\Model::get_edit_value()
 	 */
 	public function get_edit_value( $id ) {
 		return implode( ',', (array) members_get_post_roles( $id ) );
@@ -18,7 +19,7 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP\Editing\Model
 	 * Get editing options when using an ajax callback
 	 *
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model::get_ajax_options()
+	 * @see  \ACP\Editing\Model::get_ajax_options()
 	 */
 	public function get_ajax_options( $request ) {
 		return ac_helper()->user->get_roles();
@@ -26,7 +27,7 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP\Editing\Model
 
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model::get_view_settings()
+	 * @see  \ACP\Editing\Model::get_view_settings()
 	 */
 	public function get_view_settings() {
 		return array(
@@ -39,7 +40,7 @@ class ACA_Members_Pro_Editing_AccessRole extends ACP\Editing\Model
 
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model::save()
+	 * @see  \ACP\Editing\Model::save()
 	 */
 	public function save( $id, $value ) {
 

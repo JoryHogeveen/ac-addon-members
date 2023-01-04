@@ -1,14 +1,16 @@
 <?php
+namespace ACA\Members\Column;
+use ACA\Members\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Column_AccessError extends ACA_Members_Column
+class AccessError extends Column
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACA_Members_Column::__construct()
+	 * @see  Column::__construct()
 	 */
 	public function __construct() {
 		parent::__construct();
@@ -25,7 +27,7 @@ class ACA_Members_Column_AccessError extends ACA_Members_Column
 
 	/**
 	 * @inheritdoc
-	 * @see  AC_Column_Meta::get_raw_value()
+	 * @see  \AC\Column\Meta::get_raw_value()
 	 */
 	public function get_raw_value( $id ) {
 		$value = members_get_post_access_message( $id );

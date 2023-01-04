@@ -173,8 +173,8 @@ class ACA_Members {
 	public function add_columns( $list_screen ) {
 		switch ( true ) {
 			case $list_screen instanceof AC\ListScreen\Post:
-				$list_screen->register_column_type( new ACA_Members_Column_AccessRole() );
-				$list_screen->register_column_type( new ACA_Members_Column_AccessError() );
+				$list_screen->register_column_type( new \ACA\Members\Column\AccessRole() );
+				$list_screen->register_column_type( new \ACA\Members\Column\AccessError() );
 				break;
 		}
 	}
@@ -187,8 +187,8 @@ class ACA_Members {
 	public function add_pro_columns( $list_screen ) {
 		switch ( true ) {
 			case $list_screen instanceof AC\ListScreen\Post:
-				$list_screen->register_column_type( new ACA_Members_Pro_Column_AccessRole() );
-				$list_screen->register_column_type( new ACA_Members_Pro_Column_AccessError() );
+				$list_screen->register_column_type( new \ACA\Members\Pro\Column\AccessRole() );
+				$list_screen->register_column_type( new \ACA\Members\Pro\Column\AccessError() );
 				break;
 		}
 	}

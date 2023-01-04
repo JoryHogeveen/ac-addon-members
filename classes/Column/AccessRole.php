@@ -1,14 +1,16 @@
 <?php
+namespace ACA\Members\Column;
+use ACA\Members\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Members_Column_AccessRole extends ACA_Members_Column
+class AccessRole extends Column
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACA_Members_Column::__construct()
+	 * @see  Column::__construct()
 	 */
 	public function __construct() {
 		parent::__construct();
@@ -25,7 +27,7 @@ class ACA_Members_Column_AccessRole extends ACA_Members_Column
 
 	/**
 	 * @inheritdoc
-	 * @see  AC_Column::get_value()
+	 * @see  \AC\Column::get_value()
 	 */
 	public function get_value( $id ) {
 		$value = (array) $this->get_raw_value( $id );
